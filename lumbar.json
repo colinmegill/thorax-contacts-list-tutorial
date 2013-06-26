@@ -5,6 +5,9 @@
   },
   "modules": {
     "base": {
+      "routes": {
+        "": "index"
+      },
       "mixins": [
         "thorax-dep-jquery",
         "thorax",
@@ -23,7 +26,11 @@
           "module-map": true
         },
         "js/lib/bootstrap.js",
-        "js/views/people.js"
+        "js/views/people.js",
+        "js/routers/people.js",
+        "js/models/person.js",
+        "js/collections/people.js"
+
       ],
       "styles": [
         "stylesheets/base.css",
