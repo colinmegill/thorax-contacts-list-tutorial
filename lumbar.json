@@ -19,14 +19,17 @@
         "js/model.js",
         "js/collection.js",
         "js/view.js",
-        {"module-map": true},
-        "js/lib/bootstrap.js"
+        {
+          "module-map": true
+        },
+        "js/lib/bootstrap.js",
+        "js/views/people.js"
       ],
       "styles": [
         "stylesheets/base.css",
         "stylesheets/bootstrap.css"
       ]
-    }
+    },
   },
   "templates": {
     "root": "templates/",
