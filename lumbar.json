@@ -28,6 +28,7 @@
         "public/backbone.localStorage.js",
         "js/lib/bootstrap.js",
         "js/views/people.js",
+        "js/views/personForm.js",
         "js/routers/people.js",
         "js/models/person.js",
         "js/collections/people.js"

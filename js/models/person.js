@@ -1,7 +1,8 @@
 Application.Model.extend({
   name: "person",
   defaults: {
-    name: "unknown",
-    phone: "unentered"
+    firstName: "unknown",
+    lastName: "unknown",
+    phone: "unknown"
   }
 })
