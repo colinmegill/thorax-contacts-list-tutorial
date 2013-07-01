@@ -1,4 +1,4 @@
-Application.Model.extend({
+Thorax.Model.extend({
   name: "person",
   defaults: {
     firstName: "unknown",

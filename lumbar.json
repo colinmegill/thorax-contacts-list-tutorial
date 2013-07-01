@@ -31,8 +31,7 @@
         "js/views/personForm.js",
         "js/routers/people.js",
         "js/models/person.js",
-        "js/collections/people.js"
-
+        "js/collections/people.js",
       ],
       "styles": [
         "stylesheets/base.css",

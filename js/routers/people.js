@@ -4,6 +4,9 @@ new (Backbone.Router.extend({
     console.log('ow stop hitting me')
     var peopleCollection = new Application.Collections["people"](); 
 
+
+
+
     peopleCollection.fetch({
       success: function(collection, response, options){
         var peopleView = new Application.Views["people"]({
@@ -20,4 +23,3 @@ new (Backbone.Router.extend({
   }
 
 }))
-
