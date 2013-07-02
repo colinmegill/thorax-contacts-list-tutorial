@@ -1,2 +1,8 @@
 /* This stylesheet will be available on all modules */
 
+.personEditForm {
+  display: none;
+
+}
+
+

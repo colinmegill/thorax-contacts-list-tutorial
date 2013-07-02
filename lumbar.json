@@ -38,7 +38,8 @@
       ],
       "styles": [
         "stylesheets/base.css",
-        "stylesheets/bootstrap.css"
+        "stylesheets/bootstrap.css",
+        "stylesheets/bootstrap-responsive.css"
       ]
     },
   },
