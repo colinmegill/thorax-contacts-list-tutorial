@@ -6,8 +6,10 @@
   "modules": {
     "base": {
       "routes": {
-        "": "index"
+        "": "index",
+        "details/:id": "details"
       },
+
       "mixins": [
         "thorax-dep-jquery",
         "thorax",
@@ -32,6 +34,7 @@
         "js/routers/people.js",
         "js/models/person.js",
         "js/collections/people.js",
+        "js/views/personDetailView.js"
       ],
       "styles": [
         "stylesheets/base.css",

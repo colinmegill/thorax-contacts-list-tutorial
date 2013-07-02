@@ -1,7 +1,18 @@
-{{#collection}}
-  this is a person who's firstName is {{firstName}} and lastName is {{lastName}} and number is {{number}} <button name="deleteButton"> Delete </button>
-  
-
+{{#collection tag="ul"}}
+  {{#link "details/{{id}}" expand-tokens=true}}
+    <li>this is a person who's firstName is {{firstName}} and lastName is {{lastName}} and number is {{number}} </li>
+  {{/link}}
+  {{#button "handleDelete"}}Delete{{/button}}
 {{/collection}}
 
 {{view personForm}}
+
+
+
+
+
+{{! COMMENT
+    $(document.body).live('[data-click-handler]').click(function() {
+      Backbone.history.navigate
+    });
+}}

@@ -2,15 +2,13 @@ new (Backbone.Router.extend({
   routes: module.routes,
   index: function(){
     console.log('ow stop hitting me')
-    var peopleCollection = new Application.Collections["people"](); 
+    //by making this collection global, you have access to it in all of your routes
+    Application.Collections.peopleCollection = new Application.Collections.people(); 
 
-
-
-
-    peopleCollection.fetch({
+    Application.Collections.peopleCollection.fetch({
       success: function(collection, response, options){
         var peopleView = new Application.Views["people"]({
-          collection: peopleCollection
+          collection: collection //Application.Collections.people
         });
   
         Application.setView(peopleView);
@@ -20,6 +18,15 @@ new (Backbone.Router.extend({
         console.log('collection could not be fetched')
       }
     })
+  },
+  details: function(id){
+    
+    var modelDetailView = new Application.Views["personDetailView"]({
+        model: Application.Collections.peopleCollection.get(id),
+    })
+
+    Application.setView(modelDetailView)
+
   }
 
 }))
