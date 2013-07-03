@@ -11,6 +11,10 @@ Thorax.View.extend({
     },
     "invalid": function(errors){
       console.log('invalid form input' + errors);
+      _.each(errors, function(err){
+        $('input[name="'+err.name+'"]').append(err.message) // relationship between each input and error name
+        //'input[name="firstName"]'
+      })
     },
   },
   initialize: function(){
@@ -22,5 +26,13 @@ Thorax.View.extend({
   cancelEdit: function(){
     this.$('.personEditForm').hide();
     this.populate(); 
+  },
+  validateInput: function(attrs){
+    var errors = [];
+
+    if(attrs.firstName === ''){
+      errors.push({name: 'firstName',  message: 'my message'});
+    }
+    return errors;
   }
 })
