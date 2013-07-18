@@ -10,12 +10,14 @@ Thorax.View.extend({
 
     },
     "invalid": function(errors){
-      console.log('invalid form input' + errors);
-      _.each(errors, function(err){
-        $('input[name="'+err.name+'"]').append(err.message) // relationship between each input and error name
+      console.log('invalid form input' + errors[0].name);
+      console.log(errors);
+
+     //_.each(errors, function(err){
+        $('input[name="'+errors[0].name+'"]').closest("label").append(errors[0].message) // relationship between each input and error name
         //'input[name="firstName"]'
-      })
-    },
+      //})
+    }
   },
   initialize: function(){
   },
